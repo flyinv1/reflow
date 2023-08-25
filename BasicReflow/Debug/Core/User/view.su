@@ -1,0 +1,5 @@
+../Core/User/view.c:18:6:View_Init	24	static
+../Core/User/view.c:34:6:View_ShowPage	16	static
+../Core/User/view.c:39:6:View_Update	16	static
+../Core/User/view.c:43:6:View_onClick	16	static
+../Core/User/view.c:47:6:View_onScroll	16	static

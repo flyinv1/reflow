@@ -1,0 +1,5 @@
+../Core/User/Encoder/encoder.c:8:6:Encoder_Init	16	static
+../Core/User/Encoder/encoder.c:16:5:Encoder_Update	24	static
+../Core/User/Encoder/encoder.c:30:6:Encoder_Clear	16	static
+../Core/User/Encoder/encoder.c:34:6:Encoder_Reset	16	static
+../Core/User/Encoder/encoder.c:38:6:Encoder_SwitchISR	16	static

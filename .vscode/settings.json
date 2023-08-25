@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "st7735.h": "c",
+        "menu.h": "c",
+        "dev_config.h": "c",
+        "usb_device.h": "c",
+        "main.h": "c",
+        "encoder.h": "c",
+        "max6675.h": "c",
+        "view_types.h": "c",
+        "view_menu.h": "c",
+        "theme.h": "c"
+    }
+}

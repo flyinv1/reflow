@@ -1,0 +1,3 @@
+../Core/User/controller.c:11:6:Controller_Init	24	static
+../Core/User/controller.c:28:6:Controller_Main	32	static
+../Core/User/controller.c:67:6:Controller_ISRHandler	16	static

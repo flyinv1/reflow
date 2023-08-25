@@ -1,0 +1,6 @@
+../Core/User/Views/page_menu.c:29:6:Draw_MainMenu	40	static
+../Core/User/Views/page_menu.c:42:6:MainMenu_onShow	16	static
+../Core/User/Views/page_menu.c:47:6:MainMenu_onHide	16	static
+../Core/User/Views/page_menu.c:51:6:MainMenu_onUpdate	16	static
+../Core/User/Views/page_menu.c:55:6:MainMenu_onClick	16	static
+../Core/User/Views/page_menu.c:75:6:MainMenu_onScroll	24	static

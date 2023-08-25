@@ -1,0 +1,7 @@
+../Core/User/Views/page_settings.c:24:6:Draw_PID_Gain	56	static
+../Core/User/Views/page_settings.c:39:6:Draw_Settings	40	static
+../Core/User/Views/page_settings.c:54:6:Settings_onShow	16	static
+../Core/User/Views/page_settings.c:59:6:Settings_onHide	16	static
+../Core/User/Views/page_settings.c:63:6:Settings_onUpdate	16	static
+../Core/User/Views/page_settings.c:67:6:Settings_onClick	16	static
+../Core/User/Views/page_settings.c:75:6:Settings_onScroll	24	static

@@ -1,0 +1,17 @@
+23:49:25 **** Incremental Build of configuration Debug for project BasicReflow ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/User/Views/page_settings.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/User/Views/page_settings.d" -MT"Core/User/Views/page_settings.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/User/Views/page_settings.o"
+arm-none-eabi-gcc -o "BasicReflow.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\mattv\local\dev\stm32\BasicReflowV01\BasicReflow\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BasicReflow.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BasicReflow.elf
+ 
+arm-none-eabi-size   BasicReflow.elf 
+arm-none-eabi-objdump -h -S  BasicReflow.elf  > "BasicReflow.list"
+   text	   data	    bss	    dec	    hex	filename
+  53044	   1108	   6636	  60788	   ed74	BasicReflow.elf
+Finished building: default.size.stdout
+ 
+Finished building: BasicReflow.list
+ 
+
+23:49:26 Build Finished. 0 errors, 0 warnings. (took 754ms)
+

@@ -1,0 +1,5 @@
+../Core/User/Views/page_about.c:4:6:About_onShow	32	static
+../Core/User/Views/page_about.c:12:6:About_onHide	16	static
+../Core/User/Views/page_about.c:16:6:About_onUpdate	16	static
+../Core/User/Views/page_about.c:20:6:About_onClick	16	static
+../Core/User/Views/page_about.c:24:6:About_onScroll	16	static

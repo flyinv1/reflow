@@ -1,0 +1,2 @@
+../Core/User/util.c:4:5:Util_clamp_int	1
+../Core/User/util.c:11:7:Util_clamp_float	3

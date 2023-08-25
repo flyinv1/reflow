@@ -1,0 +1,3 @@
+../Core/User/model.c:4:6:Model_Init	16	static
+../Core/User/model.c:12:6:Model_Tick	16	static
+../Core/User/model.c:18:6:Model_SetState	16	static

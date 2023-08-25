@@ -1,0 +1,65 @@
+#include "controller.h"
+
+// Rotary encoder - don't malloc this;
+// Might be dangerous...
+static Encoder encoder;
+static Menu menu; // likewise, because the menu doesn't change dynamically
+
+void Controller_Init(Controller* this) {
+
+    // Set base update rate to 50 Hz. This must be greater than the desired display frame rate
+    this->update_rate = 50;
+
+    /*Setup*/
+    Encoder_Init(&encoder);
+    Menu_Init(&menu);
+
+    this->encoder = &encoder;
+    this->menu = &menu;
+    // this->menu = &menu;
+
+    this->last_tick = HAL_GetTick();
+    this->sensor_tick = this->last_tick;
+    this->sensor_interval = 50; // ms
+}
+
+void Controller_Main(Controller *this) {
+    /*Primary Loop Method*/
+    
+    /* 
+        Check for input events first
+        ---------------------------
+    */ 
+
+    // Encoder (scroll event)  
+    int scroll = Encoder_Update(
+        this->encoder,
+        HAL_GPIO_ReadPin(GPIOB, EN_CLK_Pin),
+        HAL_GPIO_ReadPin(GPIOB, EN_DT_Pin)
+    );
+    if (scroll) Menu_onScroll(this->menu, scroll);
+
+    // Button (click event fires on button release)
+    if (this->encoder->flag) {
+        // Fire callbacks
+        Menu_onClick(this->menu);
+        
+        // Clear encoder flag
+        Encoder_Clear(this->encoder);
+    }
+
+    Menu_Update(this->menu);
+
+    if (HAL_GetTick() - this->sensor_tick > this->sensor_interval) {
+        this->t1 = MAX6675_Read(GPIOB, TC1_CS_Pin, 1.0, 0.0);
+        this->t2 = MAX6675_Read(GPIOB, TC2_CS_Pin, 1.0, 0.0);
+        this->sensor_tick = HAL_GetTick();
+    }
+
+
+}
+
+void Controller_ISRHandler(Controller *this, uint16_t pin) {
+    // Interrupt called on encoder switch rising edge
+    if (pin == EN_SW_Pin) Encoder_SwitchISR(this->encoder);
+}

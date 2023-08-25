@@ -1,0 +1,5 @@
+../Core/User/Encoder/encoder.c:8:6:Encoder_Init	1
+../Core/User/Encoder/encoder.c:16:5:Encoder_Update	6
+../Core/User/Encoder/encoder.c:30:6:Encoder_Clear	1
+../Core/User/Encoder/encoder.c:34:6:Encoder_Reset	1
+../Core/User/Encoder/encoder.c:38:6:Encoder_SwitchISR	2

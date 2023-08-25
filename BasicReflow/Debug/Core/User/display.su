@@ -1,0 +1,3 @@
+../Core/User/display.c:4:6:Display_DrawFrame	24	static
+../Core/User/display.c:19:6:Display_Clear	8	static
+../Core/User/display.c:23:6:Display_ClearInner	16	static
