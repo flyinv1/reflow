@@ -61,10 +61,17 @@ void Controller_Main(Controller *this) {
     //     this->sensor_tick = HAL_GetTick();
     // }
 
-
 }
 
 void Controller_ISRHandler(Controller *this, uint16_t pin) {
     // Interrupt called on encoder switch rising edge
     if (pin == EN_SW_Pin) Encoder_SwitchISR(this->input);
+}
+
+int Controller_Calibrate_High(Controller *controller) {
+
+}
+
+int Controller_Calibrate_Low(Controller *controller) {
+
 }

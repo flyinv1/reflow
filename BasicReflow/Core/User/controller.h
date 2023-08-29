@@ -22,6 +22,9 @@ void Controller_ISRHandler(Controller *this, uint16_t pin);
 void Controller_SetPGain(Controller *this, float p);
 void Controller_SetIGain(Controller *this, float i);
 void Controller_SetDGain(Controller *this, float d);
-void Controller_Calibrate(float t_target, float t_actual);
+
+// Async controller calibration routines
+int Controller_Calibrate_High();
+int Controller_calibrate_Low();
 
 #endif // __CONTROLLER__

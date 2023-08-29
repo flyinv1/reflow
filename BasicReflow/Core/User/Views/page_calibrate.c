@@ -44,7 +44,7 @@ void Draw_Calibrate() {
     }
     else if (cal.state == CAL_COLD) {
         if (cal.calibrating) {
-            
+
         } else {
 
         }
